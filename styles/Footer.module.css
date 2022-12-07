@@ -1,0 +1,98 @@
+.warna {
+    background-color: #EFC81A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bawah{
+    display: flex;
+    flex-direction: row;
+}
+.jarak{
+    /* position: absolute; */
+/* width: 434px;
+height: 28px;
+left: 760px;
+top: 5855px; */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+/* display: flex;
+align-items: center;
+text-align: center;
+text-transform: capitalize; */
+
+color: #707070;
+
+
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.merah{
+    color: aqua;
+}
+
+.judul{
+    /* position: absolute; */
+/* width: 587px;
+height: 48px;
+left: 666px;
+top: 5505px; */
+
+margin-top: 200px;
+font-family: 'Airbnb Cereal App';
+font-style: normal;
+font-weight: 400;
+font-size: 72px;
+line-height: 48px;
+/* identical to box height, or 67% */
+
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: capitalize;
+
+color: #2E266F;
+
+
+    /* color: rgba(46, 38, 111, 1);
+    font-family: Airbnb Cereal App;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center; */
+}
+
+.isi1{
+    /* position: absolute; */
+/* width: 472px;
+height: 24px;
+left: 724px;
+top: 5614px; */
+margin-bottom: 200px;
+
+font-family: 'Airbnb Cereal App';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: capitalize;
+
+color: #707070;
+
+}
