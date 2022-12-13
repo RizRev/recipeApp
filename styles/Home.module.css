@@ -108,6 +108,45 @@
   margin-left: 0.5rem;
 }
 
+.popular{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin: 5px; */
+  /* text-align: justify; */
+}
+
+.popular div{
+  margin: 10px;
+  flex: 1
+}
+
+.awal {
+  display: flex;
+  align-items: center;
+}
+
+.awal div{
+  flex: 1
+}
+
+
+
+.ungu {
+  font-family: 'Airbnb Cereal App';
+font-style: normal;
+font-weight: 500;
+font-size: 72px;
+line-height: 90px;
+color: #2E266F;
+}
+
+.kanan {
+  text-align: right;
+  
+  
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
