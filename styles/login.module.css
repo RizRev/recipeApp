@@ -1,8 +1,11 @@
 .ukuran {
-    background-color: #EFC81A;
+    margin-left: 172px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #EFC81A;
     width: 426px;
     height: 64px;
-    padding: 0;
+    padding: 0; */
 }
 
 .gambar{
@@ -13,8 +16,15 @@
     display: flex;
 }
 
+.row{
+    margin-left: 172px;
+    display: flex;
+    flex-direction: column;
+}
+
 .tombol{
-    width: 426px;
+margin-top: 25px;
+width: 326px;
 height: 64px;
 border-radius: 10px;
 background-color:#EFC81A;
@@ -23,16 +33,25 @@ color: white;
 font-size: 16px;
 }
 
-.perataan{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex:1; */
+.textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 326px;
+    height: 40px;
+    border-radius: 5px;
+    
+}
+
+.textarea:hover{
+    border-color: #EFC81A;
 }
 
 .tittle{
-    font-family: 'Inter';
+    /* background-color: #EFC81A; */
+margin-left: 50%;
+justify-items: center;
+text-align: center;
+font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
@@ -43,16 +62,15 @@ color: #EFC81A;
 }
 
 .log{
+    margin-left: 40%;
     font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 28px;
 /* identical to box height, or 156% */
-
 display: flex;
 align-items: center;
-
 color: #8692A6;
 }
 
@@ -71,3 +89,7 @@ color: #696F79;
 .container input:checked ~ .checkmark {
     background-color: #EFC81A;
   }
+
+.perataan {
+    margin-top: 400px;
+}

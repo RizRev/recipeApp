@@ -8,6 +8,8 @@ export const loginUser = (data) => async (dispatch) => {
     const user = result.data.data;
     console.log(user);
     localStorage.setItem("token", user.token);
+    localStorage.setItem("name", user.name);
+
     dispatch({ type: "USER_LOGIN_SUCCESS", payload: user });
     Router.push("/profile");
     console.log("User Login Success");

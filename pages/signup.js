@@ -35,25 +35,28 @@ const postData = (e) => {
   return (
     <div className={style.besar}>
       <div>
-      <Image src="/image15.png"  width={760} height={1444}/>
+      <Image src="/image15.png"  width={660} height={1244}/>
       </div>
       <div className={style.perataan}>
     <h3 className={style.tittle}>Let's Get Started!</h3>
     <h4 className={style.log}>Create new acccount to access all features</h4>
     {/* <div className={style.perataan}> */}
     <form onSubmit={postData}>
+    <div className={style.ukuran}>
     <label>Name</label>
-    <div>
+    
     <input 
+    className={style.textarea}
     type="text"
     id="name"
     value={name}
     onChange={(e)=>setFullname(e.target.value)}
     />
-    </div>
+    
     <label>E-mail address*</label>
     <div>
     <input 
+    className={style.textarea}
     type="email"
     id="email"
     value={email}
@@ -62,7 +65,7 @@ const postData = (e) => {
     </div>
     <label>Phone Number</label>
     <div>
-    <input 
+    <input className={style.textarea}
     type="number"
     id="phone"
     value={phonenumber}
@@ -71,7 +74,7 @@ const postData = (e) => {
     </div>
     <label>Create New Password</label>
     <div>
-    <input 
+    <input className={style.textarea}
     type="password"
     id="password"
     value={password}
@@ -80,21 +83,20 @@ const postData = (e) => {
     </div>
     <label>New Password</label>
     <input type="password"
+    className={style.textarea}
     id="password"
     value={confirm}
     onChange={(e)=>setConfirm(e.target.value)}/>
     <label className={style.checkmark}>
     <input type="checkbox" /> I agree to terms & conditions
     </label>
-    <Link href="/">
-        Forgot Password ?
-    </Link>
     <button className={style.tombol} type="submit">Register Account</button>
-    <div>
+    <div style={{marginLeft:"50px",marginTop:"10px"}}>
         Already have account?
-        <Link href="/login">
+        <Link style={{marginLeft:"5px",color:"#EFC81A"}} href="/login">
         Log in Here
         </Link>
+        </div>
     </div>
     </form>
     

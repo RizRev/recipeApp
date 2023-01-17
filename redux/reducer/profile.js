@@ -1,30 +1,29 @@
 const initialState = {
-    user: {
+    dataProfile: {
       id: "",
       email: "",
       name: "",
-      phonenumber: "",
       photo: "",
       token: ""
     },
     isLoading: false,
   };
   
-  const UserReducer = (state = initialState, action) => {
-    if (action.type === "USER_LOGIN_PENDING") {
+  const ProfileReducer = (state = initialState, action) => {
+    if (action.type === "USER_PROFILE_PENDING") {
       return {
         ...state,
         isLoading: true,
       };
-    } else if (action.type === "USER_LOGIN_SUCCESS") {
+    } else if (action.type === "USER_PROFILE_SUCCESS") {
       return {
         ...state,
-        user: action.payload,
+        dataProfile: action.payload,
         isLoading: false,
       };
     } else {
       return state;
     }
   };
-  export default UserReducer;
+  export default ProfileReducer;
   
