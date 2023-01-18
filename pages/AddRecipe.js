@@ -91,7 +91,7 @@ function AddRecipe({token})  {
         placeholder="Ingredients" />
         <input className={style.form} onChange={handleVideo} accept="video/*"
         name="video" type="file" placeholder="Video" />
-        <div className={{marginLeft: "300px"}}>
+        <div className={styles.center}>
         <button className={styles.tombol} type="submit">submit</button>
         </div>
 
