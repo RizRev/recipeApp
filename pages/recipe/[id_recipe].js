@@ -50,11 +50,15 @@ function DetailRecipe({ data, id_recipe, token }) {
   }, []);
   const [postData, setPostData] = useState("");
   const handleChange = (e) => {
-    setPostData({
+    setPostData(
+      // e.target.value
+      {
       ...postData,
       [e.target.name]: e.target.value,
-    });
+    }
+    );
   };
+  // console.log(postData)
   const handleData = async (e) => {
     e.preventDefault();
     axios
@@ -65,7 +69,7 @@ function DetailRecipe({ data, id_recipe, token }) {
       )
       .then((result) => {
         console.log("Post comment success");
-        console.log(result);
+        console.log(result.comment);
         Swal.fire("Success", "Post comment success", "success");
         window.location.reload(false);
       })
@@ -175,7 +179,7 @@ function DetailRecipe({ data, id_recipe, token }) {
               // class="form-control bg-danger"
               id="exampleFormControlTextarea1"
               placeholder="Comment Please, hehe!"
-              name="comment_text"
+              name="comment"
               onChange={(e) => handleChange(e)}
               value={postData.comment}
             ></textarea>
