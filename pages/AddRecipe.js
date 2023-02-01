@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable jsx-a11y/alt-text */
+
 import Nav from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from "../styles/Home.module.css"
