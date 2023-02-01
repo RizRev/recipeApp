@@ -31,13 +31,8 @@ const register = () => {
         `${process.env.URL_BACKEND}/users/create`,
         user
       );
-
-      // Swal.fire("Success", "Register Success", "success");
-      // router.push("/auth/verif");
     } catch (err) {
       console.log(err.response.status);
-      // Swal.fire("Warning", "Email Already Registered", "error");
-      // router.push("/auth/login");
     }
   };
   return (
@@ -45,38 +40,9 @@ const register = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="">
-            {/* <div
-              style={{
-                backgroundImage: `url(/Icon/backgroundauth.png)`,
-                height: "900px",
-                width: "700px",
-              }}
-            >
-              <div
-                style={{
-                  backgroundImage: `url(/Icon/Rectangle.png)`,
-                  height: "100%",
-                  width: "100%",
-                  opacity: "0.5",
-                }}
-                className="col p-4 "
-              >
-                <Image
-                  src="/Icon/logo.png"
-                  width={300}
-                  height={300}
-                  style={{
-                    opacity: "1",
-                    marginTop: "300px",
-                    marginLeft: "180px",
-                  }}
-                />
-              </div>
-            </div> */}
           </div>
 
           <div className="">
-            {/* <h3 className="text-warning">Let’s Get Started !</h3> */}
             <h6 className="text-center">
               Create new account to access all features
             </h6>

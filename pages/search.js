@@ -4,10 +4,6 @@ import axios from 'axios';
 import { useRouter } from "next/router"
 import style from "../styles/search.module.css"
 import Nav from "../components/Navbar"
-
-
-
-
 function search() {
     const router = useRouter();
     const [data, setData] = useState(null);

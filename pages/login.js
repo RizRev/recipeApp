@@ -22,7 +22,6 @@ function Login() {
     };
     const result = await axios.post(
       `${process.env.URL_BACKEND}/users/login`,
-      // "http://localhost:3003/users/login",
       data,
       config
     );
@@ -60,7 +59,6 @@ function Login() {
     
     <h3 className={style.tittle}>Welcome</h3>
     <h4 className={style.log}>Log in into your exiting account</h4>
-    {/* <div className={style.perataan}> */}
     <form onSubmit={postData} >
     <div className={style.ukuran}>
     <label>E-mail</label>
@@ -100,7 +98,6 @@ function Login() {
     </div>
     <form>
     </form>
-    {/* </div> */}
     </div>
     </div>
   )

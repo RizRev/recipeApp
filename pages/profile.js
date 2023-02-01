@@ -4,14 +4,7 @@ import style from "../styles/profil.module.css"
 import Image from "next/image"
 import axios from "axios"
 import {useState, useEffect} from "react"
-import { useSelector } from "react-redux"
-import Link from "next/link"
-import { GetProfileUser } from "../redux/action/profile"
-import { useDispatch } from "react-redux"
-import Router from "next/router"
 import { useRouter } from "next/router"
-// import { RiEditBoxLine } from "react-icon/";
-// import { BsFillBucketFill } from "react-icons/bs";
 
 export const getServerSideProps = async (context) => {
   const { token } = context.req.cookies;
@@ -55,8 +48,6 @@ function Profile({token}) {
   const [recipe, setRecipe] = useState(null);
   const [save, setSave] = useState(null);
   const [like, setLike] = useState(null);
-  // const [id_liked, setIdLiked] = useState(null);
-  // const [id_saved, setIdSaved] = useState(null);
   const myrecipe = `${process.env.URL_BACKEND}/users/created`;
   useEffect(() => {
     axios
@@ -114,7 +105,6 @@ function Profile({token}) {
     <Image className={style.pensil} src="/pensil.png" alt="itu" width={10} height={10}/>
     </a>
     <div className={style.nama}>
-    {/* <h4>Ini Nama </h4> */}
 
     <h4> {data ? data.name : "data not found"}</h4>
     </div>
@@ -159,7 +149,6 @@ function Profile({token}) {
                     {save ? (
                       save.map((item) => (
                         <div
-                          // className="col-3"
                           key={item.id_recipe}
                           onClick={() =>
                             router.push(`/recipe/${item.id_recipe}`)

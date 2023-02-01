@@ -5,8 +5,6 @@ import Nav from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from "../styles/Home.module.css"
 import style from "../styles/addrecipe.module.css"
-import { useDispatch } from "react-redux";
-import { addRecipeData } from "../redux/action/add-recipe";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -47,7 +45,6 @@ function AddRecipe({token})  {
     console.log(e.target.files[0]);
   };
 
-  // const dispatch = useDispatch();
 
   const postData = async (e) => {
     e.preventDefault();
@@ -69,9 +66,7 @@ function AddRecipe({token})  {
     };
     await axios.post(`${process.env.URL_BACKEND}/recipe/create`, data, user);
     Swal.fire("Success", "Add Recipes Success", "success");
-    // dispatch(addRecipeData(data));
   };
-// onChange={(e) => setTitle(e.target.value)}
   return (
 
     <div>

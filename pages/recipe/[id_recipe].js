@@ -1,7 +1,6 @@
 import Nav from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import style from "../../styles/detailrecipe.module.css"
-import Image from "next/image"
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -51,14 +50,12 @@ function DetailRecipe({ data, id_recipe, token }) {
   const [postData, setPostData] = useState("");
   const handleChange = (e) => {
     setPostData(
-      // e.target.value
       {
       ...postData,
       [e.target.name]: e.target.value,
     }
     );
   };
-  // console.log(postData)
   const handleData = async (e) => {
     e.preventDefault();
     axios
@@ -82,7 +79,6 @@ function DetailRecipe({ data, id_recipe, token }) {
   const handleSave = async (e) => {
     e.preventDefault();
     let form = {
-      // recipe_id: id_recipe,
     };
     axios
       .get(`${process.env.URL_BACKEND}/recipe/save/${id_recipe}`, user)
@@ -121,7 +117,6 @@ function DetailRecipe({ data, id_recipe, token }) {
     <div>
       <Nav/>
       <div>
-        {/* <h1>Loream Sandwich</h1> */}
         <h1 className={style.title}>{data.data[0].name_recipe}</h1>
         <div className={style.gambar}>
         <img  src={data.data[0].photo} alt="" />
@@ -131,11 +126,6 @@ function DetailRecipe({ data, id_recipe, token }) {
                 type="submit"
                 className="btn btn-warning"
                 onClick={(e) => handleSave(e)}
-                // style={{
-                //   marginLeft: "700px",
-                //   marginRight: "50px",
-                //   marginTop: "-120px",
-                // }}
               >
                 <img
                   src="/saved.png"
@@ -147,11 +137,6 @@ function DetailRecipe({ data, id_recipe, token }) {
                 type="submit"
                 className="btn btn-warning"
                 onClick={(e) => handleLike(e)}
-                // style={{
-                //   marginLeft: "700px",
-                //   marginRight: "50px",
-                //   marginTop: "-100px",
-                // }}
               >
                 <img
                   src="/liked.png"
@@ -160,8 +145,6 @@ function DetailRecipe({ data, id_recipe, token }) {
                 />
               </button>
         </div>
-        
-        {/* <Image src={data.data[0].photo} width={541} height={350}/> */}
         <div className={style.ingredients}>
         <h4>Ingredients</h4>
         <p>{data.data[0].ingredients}</p>
@@ -176,7 +159,6 @@ function DetailRecipe({ data, id_recipe, token }) {
           <div className={style.input}>
             <textarea
               style={{width:"500px",height:"75px",borderRadius:"7px"}}
-              // class="form-control bg-danger"
               id="exampleFormControlTextarea1"
               placeholder="Comment Please, hehe!"
               name="comment"
@@ -190,7 +172,6 @@ function DetailRecipe({ data, id_recipe, token }) {
               type="submit"
               onClick={(e) => handleData(e)}
               className={style.tombol}
-              // style={{ width: "250px", height: "35px" }}
             >
               <h6>Send Comment!</h6>
             </button>

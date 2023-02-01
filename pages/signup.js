@@ -40,7 +40,6 @@ const postData = (e) => {
       <div className={style.perataan}>
     <h3 className={style.tittle}>Let's Get Started!</h3>
     <h4 className={style.log}>Create new acccount to access all features</h4>
-    {/* <div className={style.perataan}> */}
     <form onSubmit={postData}>
     <div className={style.ukuran}>
     <label>Name</label>
@@ -99,19 +98,10 @@ const postData = (e) => {
         </div>
     </div>
     </form>
-    
     <form>
-    
-    
-    
-    
-    
     </form>
-    {/* </div> */}
-    
     </div>
     </div>
-    
   )
 }
 
