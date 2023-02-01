@@ -28,7 +28,7 @@ const register = () => {
     }
     try {
       const result = await axios.post(
-        "http://localhost:3003/users/create",
+        `${process.env.URL_BACKEND}/users/create`,
         user
       );
 
