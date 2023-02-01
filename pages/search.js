@@ -14,7 +14,7 @@ function search() {
     const [search, setSearch] = useState("");
     useEffect(() => {
 axios.get(
-            `http://localhost:3003/recipe?name=${search}`
+            `${process.env.URL_BACKEND}/recipe?name=${search}`
           )
         .then((res) => {
             console.log("get data success");

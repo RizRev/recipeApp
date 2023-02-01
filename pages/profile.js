@@ -57,7 +57,7 @@ function Profile({token}) {
   const [like, setLike] = useState(null);
   // const [id_liked, setIdLiked] = useState(null);
   // const [id_saved, setIdSaved] = useState(null);
-  const myrecipe = `http://localhost:3003/users/created`;
+  const myrecipe = `${process.env.URL_BACKEND}/users/created`;
   useEffect(() => {
     axios
       .get(myrecipe, {
@@ -73,7 +73,7 @@ function Profile({token}) {
         console.log(err);
       });
   }, []);
-  const saved = `http://localhost:3003/users/saved/`;
+  const saved = `${process.env.URL_BACKEND}/users/saved/`;
   useEffect(() => {
     axios
       .get(saved, {
@@ -89,7 +89,7 @@ function Profile({token}) {
         console.log(err);
       });
   }, []);
-  const liked = `http://localhost:3003/users/liked`;
+  const liked = `${process.env.URL_BACKEND}/users/liked`;
   useEffect(() => {
     axios
       .get(liked, {

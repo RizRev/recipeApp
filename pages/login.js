@@ -12,6 +12,7 @@ function Login() {
     e.preventDefault();
     console.log(email);
     console.log(password);
+    console.log(process.env.URL_BACKEND)
     let data = {
       email,
       password,
@@ -20,7 +21,8 @@ function Login() {
       withCredentials: true,
     };
     const result = await axios.post(
-      "http://localhost:3003/users/login",
+      `${process.env.URL_BACKEND}/users/login`,
+      // "http://localhost:3003/users/login",
       data,
       config
     );
