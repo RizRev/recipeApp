@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import style from "../styles/search.module.css"
+
 
 function Alluser() {
     const [data, setData] = useState(null);
