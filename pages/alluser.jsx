@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-import style from "../styles/search.module.css"
+import style from "../styles/alluser.module.css"
 
 
 function Alluser() {
@@ -25,20 +25,24 @@ function Alluser() {
     <div>
       ini all user
       <div>
+        <div className={style.gaya1}>
         {data ? (
             data.map((item) => (
                 <div 
-                className={style.isi}
                 key={item.id}>
-                    <div className={style.daftar}>
+                    <div className={style.gaya2}>
                     {/* <img src={item.photo} style={{width: "200px",height:"200px" }} alt="" /> */}
                     <h3 style={{fontSize: "30px",verticalAling: "middle"}}>{item.name}</h3>
+                    <p>Hp : {item.phonenumber}</p>
+                    <p>Email : {item.email}</p>
                     </div>
                 </div>
             ))
         ) : (
             <h1>loading</h1>
         )}
+        </div>
+        
       </div>
     </div>
   )
