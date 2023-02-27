@@ -32,7 +32,7 @@ function Profile({token}) {
   const router = useRouter();
   useEffect(() => {
     axios
-      .get(`http://localhost:3003/users/detail`, {
+      .get(`${process.env.URL_BACKEND}/users/detail`, {
         headers: { Authorization: `Bearer ${token}`},
       })
       .then((res) => {
