@@ -67,7 +67,8 @@ export default function Home() {
       <div>
       <Image src="/sayur.png" width={400} height={400}/>
       </div>
-      
+      <div class="pubble-app" data-app-id="118932" data-app-identifier="118932"></div>
+<script type="text/javascript" src="https://cdn.chatify.com/javascript/loader.js" defer></script>
       </div>
       
     </div>
